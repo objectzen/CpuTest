@@ -7,6 +7,13 @@ public class StepsCpuTest {
         long startTime = System.currentTimeMillis();
         while( (System.currentTimeMillis() - startTime) < duration) {
             value = Math.random();
+            if (value > 0.9) {
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return value;
     }
