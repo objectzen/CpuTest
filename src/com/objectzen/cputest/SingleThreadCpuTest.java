@@ -1,6 +1,6 @@
 package com.objectzen.cputest;
 
-public class SingleCpuTest {
+public class SingleThreadCpuTest {
 
     public double performTest1(long duration) {
         double value = 0;
@@ -12,7 +12,7 @@ public class SingleCpuTest {
     }
 
     public static void main(String[] args) throws Exception {
-        SingleCpuTest cpuTest = new SingleCpuTest();
+        SingleThreadCpuTest cpuTest = new SingleThreadCpuTest();
         cpuTest.performTest1(30000);
     }
 }
